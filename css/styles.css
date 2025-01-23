@@ -1,0 +1,71 @@
+/* CUSTOM FONTS */
+
+@font-face {
+  font-family: "Techno";
+  src: url("/assets/fonts/Techno.ttf");
+}
+
+@font-face {
+    font-family: "Origin";
+    src: url("/assets/fonts/Origin.ttf");
+  }
+  
+
+/* LOCAL VARIABLES */
+:root {
+    /* FONTS */
+  --title-font: "Techno", sans-serif;
+  --header-button-font: "Origin", sans-serif;
+
+    /* GENERAL COLORS */
+
+    /* HEADER ITEMS COLORS */
+    --header-background-color: #260b31bb;
+    --header-border-color: #35043f;
+
+    /* BACKGROUND COLORS - DIMENSIONS */
+    --background-color: #18131b;
+    --background-first-vertical-line: #22113d;
+    --background-second-vertical-line: #2d0f5eb6;
+    --background-horizontal-line: #2b1450;
+    --backgroud-grid-pxs: 50px 50px;
+}
+
+/* GLOBAL STYLES */
+body {
+  display: flex;
+  /* BACKGROUND GRID */
+  background: var(--background-color);
+  background-image: linear-gradient(to right, var(--background-first-vertical-line) 3px, transparent 4px),
+    linear-gradient(to right, var(--background-second-vertical-line) 6px, transparent 4px),
+    linear-gradient(to bottom, var(--background-horizontal-line) 3px, transparent 1px);
+  background-size: var(--backgroud-grid-pxs);
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
+  min-height: 100px;
+  background-color: var(--header-background-color);
+  width: 60%;
+  margin: 0 auto;
+  border: 4px solid var(--header-border-color);
+  border-radius: 16px
+}
+
+header div {    
+    background-color: ;
+    width: 80%;
+    text-align: center;
+}
+
+header div a {
+    font-family: var(--header-button-font);
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-size: 2em;
+    margin-left: 20px;
+}
