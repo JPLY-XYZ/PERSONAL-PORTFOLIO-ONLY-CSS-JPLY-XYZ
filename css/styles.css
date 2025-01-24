@@ -2,12 +2,12 @@
 
 @font-face {
   font-family: "Techno";
-  src: url("/assets/fonts/Techno.ttf");
+  src: url("./assets/fonts/Techno.ttf");
 }
 
 @font-face {
   font-family: "Origin";
-  src: url("/assets/fonts/Origin.ttf");
+  src: url("./assets/fonts/Origin.ttf");
 }
 
 /* LOCAL VARIABLES */
