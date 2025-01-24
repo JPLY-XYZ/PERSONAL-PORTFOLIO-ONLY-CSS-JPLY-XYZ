@@ -27,6 +27,12 @@
   --header-button-background-color-hover: #4f11c4bb; /* aun no definitivo */
   --header-button-border-color-hover: #200446;
 
+  /* ABOUT ME ITEMS COLORS */
+
+  --card-back-background-color: #2e16b3;
+  --card-front-background-color: #3d0e50ab;
+  --card-front-background-border-color: #42055a;
+
   /* FOOTER ITEMS COLORS */
 
   --footer-button-background-color: #190720cb; /* aun no definitivo */
@@ -136,18 +142,95 @@ header div a {
 
 /* ABOUT ME STYLES */
 
-main{
+main {
   display: flex;
-  flex-direction: row;
- 
-  margin: 0 auto;
-  width: 60%;
+  flex-direction: column;
 }
 
+.aboutMeContainer {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 25px auto;
+  width: 80%;
+}
 
+.aboutMeContainer h1 {
+  font-family: var(--title-font);
+  font-size: 3em;
+  font-weight: 50;
+  border-bottom: 4px solid var(--header-general-border-color);
+}
+.skillsContainer {
+  height: 100px;
+  width: 400px;
+  position: absolute;
+}
 
+.skillsBack {
+  background-color: var(--card-back-background-color);
+  border-radius: 10px;
+  height: 100%;
+  position: relative;
+  z-index: 0;
+  bottom: -90px;
+  left: -10px;
+}
 
+.skillsFront {
+  background-color: var(--card-front-background-color);
+  border: 4px solid var(--card-front-background-border-color);
+  border-radius: 10px;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+/* prueba carrusel */
 
+.carousel {
+  margin: 0 auto;
+
+  overflow: hidden;
+  display: flex;
+
+  &:hover .group {
+    animation-play-state: paused;
+  }
+  > * {
+    flex: 0 0 100%;
+  }
+}
+
+.group {
+  display: flex;
+  margin-left: 30px;
+  will-change: transform; 
+  animation: scrolling 30s linear infinite;
+}
+
+@keyframes scrolling {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.card {
+  margin-left: 30px;
+  width: 90px;
+  height: 90px;
+  border-radius: 24px;
+}
+
+.card img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 /* FOOTER STYLES */
 
