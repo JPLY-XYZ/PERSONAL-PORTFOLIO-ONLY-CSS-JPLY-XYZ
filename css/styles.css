@@ -49,7 +49,7 @@
 
 
   /* IMG URLS */
-  
+
   --profile-img-url: url(../assets/personalPhoto.webp);
 
   /* HEADER */
@@ -800,4 +800,113 @@ footer {
 
 .button_footer-git:hover::before {
   box-shadow: inset 0 0 0 10em rgb(36, 41, 46);
+}
+
+
+
+
+
+
+
+@media (width <= 1200px) {
+  body{
+    width: 100vw;
+  }
+
+  header {
+    font-size: 10px;
+  }
+
+  .aboutMeContainer{
+    flex-direction: column;
+  }
+  .profile-card{
+    margin: 40px auto;
+  }
+  .articleList{
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .skillsContainer{
+    margin: 0 auto;
+  }
+
+}
+
+@media (width <= 800px) {
+ 
+  header {
+    display: none;
+  }
+  .contactMe{
+    height: auto;
+  }
+  .form_zone{
+    scale: 0.8;
+  }
+}
+
+.noScreenResolution{
+  display: none;
+}
+
+@media (width <= 500px) {
+ 
+
+  body{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+  }
+  .noScreenResolution{
+    display: flex;
+  }
+  header{
+    display: none;
+  }
+
+  main{
+    display: none;
+  }
+  .projects{
+    display: none;
+  }
+  .contactMe{
+    display: none;
+  }
+  footer{
+    display: none;
+  }
+}
+
+@media (width >= 2000px) {
+ 
+
+  body{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+  }
+  .noScreenResolution{
+    display: flex;
+  }
+  header{
+    display: none;
+  }
+
+  main{
+    display: none;
+  }
+  .projects{
+    display: none;
+  }
+  .contactMe{
+    display: none;
+  }
+  footer{
+    display: none;
+  }
+
 }
