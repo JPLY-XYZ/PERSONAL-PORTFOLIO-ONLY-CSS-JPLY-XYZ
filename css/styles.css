@@ -16,33 +16,33 @@
   --title-font: "Techno", sans-serif;
   --header-footer-button-font: "Origin", sans-serif;
 
-    /* GENERAL COLORS */
-    --background-color: #1A1A1A;
+      /* GENERAL COLORS */
+      --background-color: #1A1A1A;
 
-    /* HEADER */
-    --header-general-background-color: rgba(40, 5, 68, 0.9);        
-    --header-general-border-color: rgba(147, 51, 234, 0.6);        
-    --header-button-background-color: rgba(76, 29, 149, 0.7);       
-    --header-button-border-color: rgba(180, 70, 255, 0.7);         
-    --header-button-background-color-hover: rgba(134, 25, 143, 0.8);
-    --header-button-border-color-hover: #DA00FF;                    
-  
-    /* ABOUT ME */
-    --card-back-background-color: rgba(42, 9, 68, 0.95);            
-    --card-front-background-color: rgba(56, 15, 89, 0.9);           
-    --card-front-background-border-color: #9D00FF;                 
-  
-    /* FOOTER */
-    --footer-button-background-color: rgba(40, 5, 68, 0.7);        
-    --footer-button-border-color: #BE0AFF;                         
-    --footer-button-background-color-top: #2D0A3D;                 
-    --footer-button-border-color-top: #FF00F5;                     
-  
-    /* BACKGROUND LINES */
-    --background-first-vertical-line: rgba(157, 0, 255, 0.15);      
-    --background-second-vertical-line: rgba(65, 15, 112, 0.1);      
-    --background-horizontal-line: rgba(190, 10, 255, 0.1);          
-    --backgroud-grid-pxs: 50px 50px;
+      /* HEADER */
+      --header-general-background-color: rgba(40, 5, 68, 0.9);        
+      --header-general-border-color: rgba(147, 51, 234, 0.6);        
+      --header-button-background-color: rgba(76, 29, 149, 0.7);       
+      --header-button-border-color: rgba(180, 70, 255, 0.7);         
+      --header-button-background-color-hover: rgba(134, 25, 143, 0.8);
+      --header-button-border-color-hover: #DA00FF;                    
+    
+      /* ABOUT ME */
+      --card-back-background-color: rgba(42, 9, 68, 0.95);            
+      --card-front-background-color: rgba(56, 15, 89, 0.9);           
+      --card-front-background-border-color: #9D00FF;                 
+    
+      /* FOOTER */
+      --footer-button-background-color: rgba(40, 5, 68, 0.7);        
+      --footer-button-border-color: #BE0AFF;                         
+      --footer-button-background-color-top: #2D0A3D;                 
+      --footer-button-border-color-top: #FF00F5;                     
+    
+      /* BACKGROUND LINES */
+      --background-first-vertical-line: rgba(157, 0, 255, 0.15);      
+      --background-second-vertical-line: rgba(65, 15, 112, 0.1);      
+      --background-horizontal-line: rgba(190, 10, 255, 0.1);          
+      --backgroud-grid-pxs: 50px 50px;
   
 }
 
@@ -278,7 +278,7 @@ gap: 20px;
 }
 
 .profile-card__profile-pic {
-  background-image: url(./assets/personalPhoto.webp);
+  background-image: url(../assets/personalPhoto.webp);
   background-size: cover;
   position: absolute;
   width: calc(100% - 6px);
@@ -702,7 +702,7 @@ footer {
   transform-origin: center center;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding-inline: 25px;
 }
@@ -715,4 +715,124 @@ footer {
 
 .footerBox .footerCube {
   transition: transform 2s;
+}
+
+/* BOTONERA IMAGENES */
+
+.footerBox:hover .footerCube {
+  cursor: pointer;
+  transform: rotateX(-95deg);
+  transition: transform 4s;
+}
+
+.footerBox .footerCube {
+  transition: transform 2s;
+}
+
+/* Footer Buttons */
+
+.button_footer-yt {
+  background: transparent;
+  position: relative;
+  padding: 5px 15px;
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid rgb(255 0 0);
+  border-radius: 25px;
+  outline: none;
+  overflow: hidden;
+  color: rgb(255 0 0);
+  transition: color 0.3s 0.1s ease-out;
+  text-align: center;
+}
+
+.button_footer span {
+  margin: 10px;
+}
+
+.button_footer::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  content: "";
+  border-radius: 50%;
+  display: block;
+  width: 20em;
+  height: 20em;
+  left: -5em;
+  text-align: center;
+  transition: box-shadow 0.5s ease-out;
+  z-index: -1;
+}
+
+.button_footer-yt:hover {
+  color: #fff;
+  border: 1px solid rgb(255 0 0);
+}
+
+.button_footer-yt:hover::before {
+  box-shadow: inset 0 0 0 10em rgb(255 0 0);
+}
+
+
+.button_footer-lik {
+  background: transparent;
+  position: relative;
+  padding: 5px 15px;
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid rgb(0, 119, 181);
+  border-radius: 25px;
+  outline: none;
+  overflow: hidden;
+  color: rgb(0, 119, 181);
+  transition: color 0.3s 0.1s ease-out;
+  text-align: center;
+}
+.button_footer-lik:hover {
+  color: #fff;
+  border: 1px solid rgb(0, 119, 181);
+}
+
+.button_footer-lik:hover::before {
+  box-shadow: inset 0 0 0 10em rgb(0, 119, 181);
+}
+
+.button_footer-git {
+  background: transparent;
+  position: relative;
+  padding: 5px 15px;
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 25px;
+  outline: none;
+  overflow: hidden;
+  color: rgb(0, 0, 0);
+  transition: color 0.3s 0.1s ease-out;
+  text-align: center;
+}
+
+.button_footer-git:hover {
+  color: #fff;
+  border: 1px solid rgb(36, 41, 46);
+}
+
+.button_footer-git:hover::before {
+  box-shadow: inset 0 0 0 10em rgb(36, 41, 46);
 }
